@@ -1,0 +1,58 @@
+.page-header {
+  position: relative;
+  text-align: center;
+  padding: 90px 24px 65px;
+  background: var(--gradient-dark);
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+/* Background Tech Grid Lines */
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.3;
+}
+
+.page-header-glow {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #8b5cf6 0%, #6366f1 50%, transparent 70%);
+  filter: blur(100px);
+  opacity: 0.4;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.page-header h1 {
+  position: relative;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.page-header p {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #94a3b8;
+  font-size: 1.05rem;
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+@media (max-width: 600px) {
+  .page-header { padding: 65px 20px 45px; }
+  .page-header h1 { font-size: 2rem; }
+  .page-header p { font-size: 0.95rem; }
+}

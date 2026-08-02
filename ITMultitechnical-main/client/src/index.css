@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-black: #0b0f17;
+  --color-white: #ffffff;
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-500: #64748b;
+  --color-gray-700: #334155;
+  --color-gray-900: #0f172a;
+
+  /* Accent Colors */
+  --color-primary: #6366f1;
+  --color-accent: #8b5cf6;
+  --color-pink: #ec4899;
+
+  /* Status Colors */
+  --color-success-bg: #ecfdf5;
+  --color-success-text: #059669;
+  --color-error-bg: #fef2f2;
+  --color-error-text: #dc2626;
+
+  /* Gradients & Glows */
+  --gradient-brand: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  --gradient-dark: linear-gradient(135deg, #090d16 0%, #111827 50%, #1e1b4b 100%);
+  --glow-purple: rgba(139, 92, 246, 0.35);
+  --glow-indigo: rgba(99, 102, 241, 0.25);
+
+  /* Elevation & Borders */
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-glow: 0 0 25px var(--glow-purple);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(226, 232, 240, 0.8);
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--color-gray-900);
+  line-height: 1.6;
+  background: var(--color-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Technical Tech Grid Overlay (Optional background utility) */
+.bg-tech-grid {
+  background-image: radial-gradient(rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+button {
+  font-family: inherit;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-gray-900);
+}
+
+.gradient-text {
+  background: var(--gradient-brand);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
